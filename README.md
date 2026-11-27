@@ -45,6 +45,8 @@ Each `session_id` has its own history, so different chats never share memory.
 
 This chatbot answers questions about Lilian Weng's blog post [*LLM Powered Autonomous Agents*](https://lilianweng.github.io/posts/2023-06-23-agent/) using **RAG (Retrieval-Augmented Generation)**. It also remembers the conversation, so a follow-up like *"What are common ways of doing **it**?"* still works.
 
+![Conversational Q&A chatbot end-to-end flowchart](assets/qa-chatbot-flowchart.png)
+
 | # | Topic | Main LangChain pieces |
 |---|---|---|
 | 1–2 | Load keys and connect to the LLM | `load_dotenv()`, `ChatGroq` |
@@ -115,6 +117,7 @@ ask → load history → inject → rewrite → retrieve → answer → return �
 ├── ConversationQ&AChatbot.ipynb           # Notebook 2: conversational RAG Q&A chatbot
 ├── assets/
 │   ├── chatbot-infographic.png            # Infographic used in this README
+│   ├── qa-chatbot-flowchart.png           # End-to-end flowchart of notebook 2
 │   └── conversation-history-slides.pdf    # Slides: how automatic history works
 ├── .env                                   # Your API keys (not committed)
 ├── .gitignore
